@@ -3,8 +3,8 @@
 while true; do
     echo "开始网络检测：$(date)"
 
-    # 尝试 ping baidu.com
-    ping -c 3 baidu.com > /dev/null 2>&1
+    # 尝试 ping bing.com
+    ping -c 3 bing.com > /dev/null 2>&1
     ping_status=$?
 
     # 假设 WAN 口为 eth0.2
@@ -18,7 +18,7 @@ while true; do
     if [ $ping_status -ne 0 ]; then
 
         # 等待10s
-        echo "无法ping通baidu，等待10s后发送post"
+        echo "无法ping通bing，等待10s后发送post"
         sleep 10
 
         # 获取 WAN 口的 IP 地址
@@ -56,3 +56,4 @@ while true; do
     echo "------------------------------"
     sleep 120  # 等待 2 分钟再检查
 done
+
