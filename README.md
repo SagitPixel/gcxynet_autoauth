@@ -4,3 +4,5 @@ nasip我也不知道是啥，可能也要f12查看\
 (sleep 15 && /path/to/your/script.sh) &
 \
 使用上面这段脚本放到启动项exit 0前面，想到于延迟15s启动
+
+本项目将ping baidu.com换成ping bing.com以解决可能的DNS污染问题
