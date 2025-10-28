@@ -3,8 +3,8 @@
 while true; do
     echo "开始网络检测：$(date)"
 
-    # 尝试 ping baidu.com
-    ping -c 3 baidu.com > /dev/null 2>&1
+    # 尝试 ping bing.com
+    ping -c 3 bing.com > /dev/null 2>&1
     ping_status=$?
 
         # 假设 WAN 口为 eth0
@@ -15,7 +15,7 @@ while true; do
         mima="123123"
 
     if [ $ping_status -ne 0 ]; then
-        echo "无法 ping 通 baidu.com，正在重启 wan 接口..."
+        echo "无法 ping 通 bing.com，正在重启 wan 接口..."
         # 重启 wan 接口，刷新ip
         ifdown wan
         ifup wan
